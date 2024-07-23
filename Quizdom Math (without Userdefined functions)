@@ -1,0 +1,71 @@
+// import static org.junit.jupiter.api.Assertions.assertEquals;
+
+// import org.junit.jupiter.api.Test;
+import java.util.Scanner;
+import java.util.Random;
+
+
+public class Main {
+  public static void main(String[] args) {
+    Scanner scan1= new Scanner(System.in);
+    System.out.println("please tell me your name");
+    String username=scan1.nextLine();
+    System.out.println("Hi! " + username + " Welcome To Math QuizDOM");
+    System.out.println("Are you excited " + username + "?  Let's test your math skills -_-");
+    int max=9,min=0;
+
+    Random rand1 = new Random();
+    int randomNum1 = rand1.nextInt((max - min + 1) + min);    
+    Random rand2 = new Random();
+    int randomNum2 = rand2.nextInt((max - min + 1) + min);
+    System.out.println("What is Sum of " + randomNum1 + " And " + randomNum2 + "?");
+    Scanner scan2 = new Scanner(System.in);
+    int answer=scan2.nextInt();
+    int sum= randomNum1+randomNum2;
+    int counter=0;
+    if(answer==sum){
+      counter ++;
+    }
+    Random rand3 = new Random();
+    int randomNum3 = rand3.nextInt((max - min + 1) + min);
+    Random rand4 = new Random();
+    int randomNum4 = rand4.nextInt((max - min + 1) + min);
+    System.out.println("What is Subtraction of " + randomNum3 + " And " + randomNum4 + "?");
+    Scanner scan3 = new Scanner(System.in);
+    int answer1=scan3.nextInt();
+    int sub= randomNum3-randomNum4;
+    if(answer1==sub){
+      counter ++;
+    }
+    Random rand5 = new Random();
+    int randomNum5 = rand5.nextInt((max - min + 1) + min);
+    Random rand6 = new Random();
+    int randomNum6 = rand6.nextInt((max - min + 1) + min);
+    System.out.println("What is Multiplication of " + randomNum5 + " And " + randomNum6 + "?");
+    Scanner scan4 = new Scanner(System.in);
+    int answer2=scan4.nextInt();
+    int mul= randomNum5*randomNum6;
+    if(answer2==mul){
+      counter ++;
+    }
+    Random rand7 = new Random();
+    int randomNum7 = rand7.nextInt((max - min + 1) + min);
+    Random rand8 = new Random();
+    int randomNum8 = rand8.nextInt((max - min + 1) + min);
+    System.out.println("What is Division of " + randomNum7 + " And " + randomNum8 + "?");
+    Scanner scan5 = new Scanner(System.in);
+   int answer3=scan5.nextInt();
+   int div= randomNum7/randomNum8;
+    if(answer3==div){
+      counter ++;
+    }
+    System.out.println("Your Score out of 4 is " + counter);
+    System.out.println("Quiz Is Ended, Thank you for Playing " + username);
+
+
+
+    
+  }
+
+
+}
